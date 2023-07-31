@@ -49,3 +49,29 @@ let enemies = [enemy1, enemy2, enemy3]; // creates an array of all instantiated 
 hero.printInventory(); // prints the inventory of the hero
 
 // enemy1.printInventory();
+
+const getRandomNumber = (min, max) => {
+  return Math.floor(Math.random() * (max - min + 1) + min);
+};
+
+// console.log(getRandomNumber(1, 10));
+
+// hero.printInventory();
+
+function fight() {
+  console.log("You Chose to FIGHT");
+}
+
+function run() {
+  console.log("You Chose to RUN");
+}
+
+const options = ["fight", "run"];
+let fightOrRun = readline.keyInSelect(options, "Do you want to fight or run??");
+
+if (options[fightOrRun] === "fight") {
+  fight();
+} else if (options[fightOrRun] === "run") {
+  run();
+}
+
