@@ -19,20 +19,26 @@ export default function Form() {
   console.log(inputs);
 
   return (
-    <form>
-      <input
-        placeholder="top text"
-        onChange={handleChange}
-        name="topText"
-        value={inputs.topText}
-      />
-      <input
-        placeholder="bottom text"
-        onChange={handleChange}
-        name="bottomText"
-        value={inputs.bottomText}
-      />
-      <button>Submit</button>
-    </form>
+    <>
+      <form>
+        <input
+          placeholder="top text"
+          onChange={handleChange}
+          name="topText"
+          value={inputs.topText}
+        />
+        <input
+          placeholder="bottom text"
+          onChange={handleChange}
+          name="bottomText"
+          value={inputs.bottomText}
+        />
+        <button>Submit</button>
+      </form>
+      <div>
+        <p>{inputs.topText}</p>
+        <p>{inputs.bottomText}</p>
+      </div>
+    </>
   );
 }
